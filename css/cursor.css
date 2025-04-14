@@ -1,0 +1,26 @@
+body{
+    cursor: hidden;
+} 
+
+ .cursor {
+    pointer-events: none;
+    mix-blend-mode: darken;
+  }
+  .cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: blur;
+    z-index: 1000;
+  }
+  .cursor__ball--big {
+    /* Style pour la grosse boule, par exemple : */
+    width: 30px;
+    height: 30px;
+    background-color: rgba(161, 20, 24, 0.7);
+    border-radius: 50%;
+  }
+  .cursor__ball--small svg circle {
+    fill: rgb(161, 20, 24);
+  }
+  

@@ -1,0 +1,166 @@
+body {
+    overflow-x: hidden;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fafafa;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.maint-bg {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+
+.maint-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.08;
+}
+
+.maint-box {
+    position: relative;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 2rem;
+}
+
+.content1 img {
+    opacity: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+.content2 {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    width: 100%;
+    text-align: left;
+}
+
+.field{
+    width: 100%;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 60% !important;
+    margin-top: 1rem;
+}
+
+.input-box div input {
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+    border: 1px ridge #4a4a4a;
+    border-radius: 3px;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.btn {
+    width: 100%;
+    background: #a11418 !important;
+    margin-top: 1rem;
+    border: 1px solid #a11418 !important;
+    padding: 10px 10px !important;
+    color: white !important;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    color: white !important;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .maint-box {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .content1 img {
+        width: 80%;
+    }
+
+    .content2 {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .input-box {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .maint-box {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+    
+    .content1 img {
+        width: 100%;
+    }
+
+    .content2 {
+        text-align: left;
+        align-items: start;
+    }
+    
+    .input-box {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 2.6rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .content2 {
+        text-align: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .input-box {
+        width: 80%;
+    }
+
+}
+

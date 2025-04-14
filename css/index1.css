@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Benoru';
+    src: url(../font/Bernoru.otf) format('opentype'),
+}
+
+#home{
+    background: url(../images/patterns/pattern2.svg) !important;
+}
+
+.slogan{
+    font-size: 1.1rem !important;
+    background-color: #75757509 !important;
+}
+
+#home h1, #home h2{
+    color: #3d3d3d !important;
+    text-transform: uppercase !important;
+    font-size: 3.3rem;
+}
+
+header nav ul li a{
+    color: #3d3d3d !important;
+}
+
+#home h1{
+    font-family: 'Benoru' !important;
+
+}
+
+#home .text-warning{
+    color: #a11418 !important;
+}
+

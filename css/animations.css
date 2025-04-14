@@ -1,0 +1,3 @@
+.home-img img, .content1 img{   
+    animation: up-down-img 1.7s ease-in-out infinite alternate both ;
+}

@@ -1,0 +1,101 @@
+#home{
+    background: url(../images/bg-img/bg1.svg);
+}
+
+.offre_img{
+    height: 38%;
+  }
+
+.main-title{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2.5vh !important;
+    margin-top: 50px !important;
+}
+
+@media (max-width: 767px){
+    .index-img-parent{
+        display: flex;
+        justify-content: center;
+    }
+    .index-img{
+        display: flex;
+        justify-content: center;
+        max-width: 85% !important;
+    }
+    .index-img img{
+        width: 80% !important;
+    }
+
+    .services-pt{
+        background: rgba(100, 100, 100, 0.05);
+        border-radius: 15px;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+    
+    .services-pt:last-child{
+        margin-bottom: 0px;
+    }
+    .icon-four a{
+        margin-top: 0px !important;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        align-self: start !important;
+        background: rgba(32, 32, 32, 0.5) !important;
+        opacity: 0.2 !important;
+        width: 3.25rem !important;
+        height: 3.25rem !important;
+        border-radius: 50% !important;
+    }
+    .nav-item{
+        border-bottom: 1px solid #4a4a4a1b;
+    }
+    .nav-btn{
+        margin-top: 15px !important;
+    }
+}
+
+@media (min-width: 812px) and (orientation: landscape){
+    .index-img{
+        margin: auto !important;
+        max-width: 85% !important;
+    }
+
+    .services-pt{
+        background: rgba(100, 100, 100, 0.05);
+        border-radius: 15px;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .services-pt img{
+        width: 32px;
+        height: 32px;
+    }
+    
+    .services-pt:last-child{
+        margin-bottom: 0px;
+    }
+
+    .icon-four a{
+        margin-top: 0px !important;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        align-self: start;
+        background: black;
+        opacity: 0.2;
+        height: 7vh;
+        border-radius: 50%;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        align-self: start !important;
+        background: rgba(32, 32, 32, 0.5) !important;
+        opacity: 0.2 !important;
+        width: 3.25rem !important;
+        height: 3.25rem !important;
+        border-radius: 50% !important;
+    }
+  }
