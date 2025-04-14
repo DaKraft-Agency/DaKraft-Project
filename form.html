@@ -5,26 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DaKraft - Maintenance en cours | Développement Web Professionnel</title>
-    <meta name="description" content="DaKraft est actuellement en maintenance. Nous travaillons à améliorer votre expérience. Découvrez nos services de développement web professionnel.">
-    <meta name="keywords" content="DaKraft, Création site web, Site web Dakar, Créer un site Dakar, Heberger un site Dakar,  maintenance, développement web, création de site internet, web design, référencement, hébergement web">
-    <meta name="author" content="DaKraft">
+    <title>DaKraft - Responsive Landing Page Template</title>
     <link rel="icon" type="images/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- remix icon  -->
     <link rel="stylesheet" href="css/remixicon.css">
+    <!-- bootstrap  -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/maintenance.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/cursor.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/form.js"></script>
 </head>
 
-<body data-bs-spy="scroll">
+<body data-bs-spy="scroll" data-bs-target="#navbarCollapse">
+    <div id="preloader">
+        <div class="status">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- header section start with navbar -->
     <header>
         <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-light" id="navbar">
             <div class="container">
                 <div class="navbar-brand logo">
-                    <a class="navbar-caption fs-4 text-primary fw-bold ls-1" href="index.html#home"><img src="images/intitales_transparent.png" width="56px" alt="Favicon"> Da<span class="text-warning">Kraft</span>
+                    <a class="navbar-caption fs-4 text-primary fw-bold ls-1" href="#"><img src="images/intitales_transparent.png" width="56px" alt="Favicon"> Da<span class="text-warning">Kraft</span>
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -34,129 +44,353 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mx-auto" id="navbar-navlist">
                         <li class="nav-item">
-                            <a class="nav-link text-primary" href="index.html#home">Accueil</a>
+                            <a class="nav-link text-primary" href="#home">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-primary" href="index.html#about">A propos</a>
+                            <a class="nav-link text-primary" href="#about">A propos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-primary" href="#index.html#services">Services</a>
+                            <a class="nav-link text-primary" href="#services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-primary" href="tarifs.html">Tarifs</a>
+                            <a class="nav-link text-primary" href="#price">Tarifs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-primary" href="index.html#contacts">Contacts</a>
+                            <a class="nav-link text-primary" href="#contacts">Contacts</a>
                         </li>
                     </ul>
                     <div class="nav-btn">
-                        <a href="maintenance.html" class="btn btn-light text-primary rounded-2 border">Marketplace<i
+                        <a href="#" class="btn btn-light text-primary rounded-2 border">Commandez<i
                                 class="ri-arrow-right-line border-start ms-2 ps-2"></i></a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- header part end  -->
 
-    <div id="main">   
-        <div class="maint-bg">
-            <img src="images/bg-img/bg1.png" alt="">
-        </div>
-        <div class="maint-box">
-            <div class="maint-content content1">
-                <img src="images/maintenance4.svg" alt="" width="80%">
+    <!-- hero part with images -->
+    <section class="hero-part bg-home-7 section bg-light" id="home">
+        <div class="container" style="position: relative; z-index: 99;">
+            <div class="row justify-content-center" style="position: relative; z-index: 99;">
+                <div class="col-md-8">
+                    <form id="multiStepForm" action="php/form.php" method="POST">
+                        <!-- Étape 1 -->
+                        <div class="form-step active" data-step="1">
+                            <h3>Informations Personnelles</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="nice-form-group">
+                                        <label>Prénom</label>
+                                        <input type="text" name="prenom" placeholder="Votre prénom" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="nice-form-group">
+                                        <label>Nom</label>
+                                        <input type="text" name="nom" placeholder="Votre nom" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="nice-form-group">
+                                        <label>Téléphone</label>
+                                        <input type="text" name="telephone" placeholder="Votre téléphone" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="nice-form-group">
+                                        <label>Email</label>
+                                        <input type="email" name="email" placeholder="Votre email" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nice-form-group">
+                                <button type="button" class="btn btn-primary next-step">Suivant</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Étape 2 -->
+                        <div class="form-step" data-step="2">
+                            <h3>Entreprise & Projet</h3>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="nice-form-group">
+                                        <label>Nom de l'entreprise</label>
+                                        <input type="text" name="entreprise" placeholder="Votre entreprise" required />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="nice-form-group">
+                                        <label>Secteur d'activité</label>
+                                        <select name="site-type" required>
+                                            <option value="">Sélectionnez un type</option>
+                                            <option value="technologie">Technologie</option>
+                                            <option value="commerce">Commerce</option>
+                                            <option value="restauration">Restauration</option>
+                                            <option value="sante">Santé</option>
+                                            <option value="education">Education</option>
+                                            <option value="artisanat">Artisanat</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="nice-form-group">
+                                        <label>Budget</label>
+                                        <select name="budget" required>
+                                            <option value="">Sélectionnez votre budget</option>
+                                            <option value="Moins-de-100.000-Frcs">Moins de 100.000 Frcs</option>
+                                            <option value="100.000---200.000">100.000 - 200.000</option>
+                                            <option value="200.000---400.000 Frcs">200.000 - 400.000 Frcs</option>
+                                            <option value="Plus-de-400.000-Frcs">Plus de 400.000 Frcs</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="nice-form-group">
+                                        <label>Objectif du site</label>
+                                        <textarea width="100px" name="site-objectif" placeholder="Décrivez l'objectif principal" required></textarea>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-md-6">
+                                            <div class="nice-form-group">
+                                                <button type="button" class="btn btn-secondary prev-step">Précédent</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="nice-form-group">
+                                                <button type="button" class="btn btn-primary next-step">Suivant</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    
+                        <!-- Étape 3 -->
+                        <div class="form-step" data-step="3">
+                            <h3>Type de site voulu</h3>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="nice-form-group">
+                                        <div class="step-three">
+                                            <div class="radio-group radio-input" >
+                                                <label class="label"><input type="radio" name="option" value="1"> Vitrine</label>
+                                                <label class="label"><input type="radio" name="option" value="2"> Portfolio</label>
+                                            </div>
+                                            <div class="radio-group radio-input">
+                                                <label class="label"><input type="radio" name="option" value="4"> E-commerce</label>
+                                                <label class="label"><input type="radio" name="option" value="5"> Blog / Média</label>
+                                                <label class="label"><input type="radio" name="option" value="other" id="other-radio"><input type="text" id="other-text" placeholder="Autre" style="display: inline-block;">                                            </div>                                                </label>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="row"> 
+                                <div class="col-md-6">
+                                    <div class="nice-form-group">
+                                        <button type="button" class="btn btn-secondary prev-step">Précédent</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="nice-form-group">
+                                        <button type="submit" class="btn btn-success">Envoyer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="maint-content content2" style="display: flex;"> 
-                <h1 style="font-size: 2.6rem; margin-bottom: 20px;">Nous serons bientôt en ligne !</h1>
-                <p>Nous travaillons actuellement sur notre site pour vous offrir une expérience optimale. Un peu de patience, et vous pourrez bientôt découvrir nos services !</p>      
-<form class="nice-form-group input-box" id="form">
-    <div class="field">
-        <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required>
-    </div>
-    <div class="field">
-        <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
-    </div>
-    <div class="field">
-        <input type="text" name="telephone" id="telephone" placeholder="Votre téléphone" required>
-    </div>
-    <div class="field">
-        <input type="email" name="visitor_mail" id="visitor_mail" placeholder="Entrez votre adresse mail" required>
-    </div>
-    <input type="submit" class="btn btn-primary submit" id="button" value="Notifiez moi !" >
-</form>
-            </div>
         </div>
-    </div>
+        <div>
+            <img src="images/business_doodle_final.jpeg" alt="" class="img-fluid back-img position-absolute top-0" style="z-index: 0; margin-top: 10vh; opacity: 0.05;">
+        </div>
+    </section>
+    
 
+    <!-- footer-part start -->
+    <footer class="footer-part section pb-5" id="contacts">
+        <div class="container">
+            <div class="footer-info">
+                <!-- row start -->
+                <div class="row position-relative">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="logo">
+                            <a class="fs-4 text-light fw-bold ls-1" href="#"><i
+                                    class="ri-blaze-fill align-top text-warning fs-3"></i>DaKraft
+                            </a>
+                        </div>
+                        <p class="mt-4 text-white-50">We are improving our social presence, please like us or follow us
+                            to know all the news about products, releases and services.
+                        </p>
+                        <div class="footer-icon mb-4 mt-4">
+                            <h5 class="text-light fs-5 mb-4">Followed by</h5>
+                            <a href="#" class="icon-link icon-link-hover text-white-50"><i
+                                    class="ri-facebook-fill me-2 bi"></i>
+                            </a>
+                            <a href="#" class="icon-link icon-link-hover text-white-50"><i
+                                    class="ri-instagram-line mx-2 bi"></i>
+                            </a>
+                            <a href="#" class="icon-link icon-link-hover text-white-50"><i
+                                    class="ri-linkedin-box-fill mx-2 bi"></i>
+                            </a>
+                            <a href="#" class="icon-link icon-link-hover text-white-50"><i
+                                    class="ri-twitter-fill mx-2 bi"></i>
+                            </a>
+                            <a href="#" class="icon-link icon-link-hover text-white-50"><i
+                                    class="ri-mail-line mx-2 bi"></i>
+                            </a>
+                            <a href="#" class="icon-link icon-link-hover text-white-50"><i
+                                    class="ri-google-fill mx-2 bi"></i>
+                            </a>
+                            <a href="#" class="icon-link icon-link-hover text-white-50"><i
+                                    class="ri-slack-fill mx-2 bi"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 pt-2">
+                        <h5 class="text-light fs-5">Company</h5>
+                        <ul class="list-unstyled mt-4">
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>About
+                                    Us</a></li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Brand</a>
+                            </li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Team</a>
+                            </li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Pricing</a></li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Project</a></li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Blog</a>
+                            </li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Careers</a></li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-12 pt-2">
+                        <h5 class="text-light fs-5">Useful Links</h5>
+                        <ul class="list-unstyled mt-4">
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Terms of
+                                    Services</a></li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Privacy
+                                    Policy</a></li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning text-warning"></i>Documentation</a>
+                            </li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>
+                                    Changelog</a></li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Components
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 pt-2">
+                        <h5 class="text-light fs-5">Start project with DaKraft</h5>
+                        <div class="footer-btn mt-4 mb-4">
+                            <a href="#" class="btn btn-light">Sign Up !</a>
+                            <a href="#" class="btn bg-warning-subtle">Subscribe</a>
+                        </div>
+                        <div class="d-flex">
+                            <i class="ri-twitter-fill fs-5 me-3 text-warning"></i>
+                            <p class="text-white-50">Pleasures have to repudiated annoyances accepted therefore always
+                                holds chooses
+                                enjoy a pleasure
+                                consequences.</p>
+                        </div>
+                        <div class="d-flex mt-2">
+                            <i class="ri-twitter-fill fs-5 me-3 text-warning"></i>
+                            <p class="text-white-50">Greater pleasures el esndures pains avoid welcomed avoided pariatu.
+                            </p>
+                        </div>
+                        <p class="text-white-50">Are you developer ? <a href="#" class="text-light">Learn More !</a></p>
+                    </div>
+                </div>
+                <!-- row end -->
+            </div>
+        </div>
+        <!-- container end  -->
+        <img src="images/footer.png" alt="" class="img-fluid img-top">
+    </footer>
+    <!-- footer-part end -->
+    <!-- copyright footer start  -->
     <div class="footer-copyright py-3">
         <div class="copy-info text-center text-white-50">
-            © 2023 DaKraft
+            © 2023 DaKraft - <a href="#" class="text-white-50 text-decoration-underline">
+                Themesdesign</a>
         </div>
     </div>
+    <!-- copyright footer end  -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
-    <script>
-        emailjs.init("oXqTAdP4BwR39icbD");
-
-        const btn = document.getElementById('button');
-        const emailInput = document.getElementById('visitor_mail');
-        const form = document.getElementById('form');
-
-        function validateEmail(email) {
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return regex.test(email);
-        }
-
-        function showError(message) {
-            let errorElement = document.querySelector('.error-message');
-            if (!errorElement) {
-                errorElement = document.createElement('div');
-                errorElement.className = 'error-message text-danger mt-2';
-                form.appendChild(errorElement);
-            }
-            errorElement.textContent = message;
-        }
-
-        function clearError() {
-            const errorElement = document.querySelector('.error-message');
-            if (errorElement) {
-                errorElement.remove();
-            }
-        }
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            clearError();
-
-            const email = emailInput.value.trim();
-
-            if (!email) {
-                showError('Veuillez entrer votre adresse email');
-                return;
-            }
-
-            if (!validateEmail(email)) {
-                showError('Adresse email invalide');
-                return;
-            }
-
-            btn.value = 'Envoi en cours...';
-
-            const serviceID = 'service_1bo16d3';
-            const templateID = 'template_usyjh1e';
-
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    btn.value = 'Notifiez moi !';
-                    alert('Message envoyé avec succès!');
-                    form.reset();
-                }, (err) => {
-                    btn.value = 'Notifiez moi !';
-                    alert('Erreur: ' + JSON.stringify(err));
-                });
-        });
-    </script>
 </body>
 
 </html>
+</final_file_content>
+
+Please note: Before moving, please review the updated content of the file inside final_file_content, as it is now the current state of the file (including any auto-formatting done by the system), to see if there are any issues/problems or redundant code. If you need to make further changes to this file, use <replace_in_file> to propose SEARCH/REPLACE operations to update the file.
+
+<new_errors>
+
+</new_errors><environment_details>
+                                    Changelog</a></li>
+                            <li><a href="#" class="text-white-50"><i
+                                        class="ri-arrow-drop-right-line me-1 text-warning"></i>Components
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 pt-2">
+                        <h5 class="text-light fs-5">Start project with DaKraft</h5>
+                        <div class="footer-btn mt-4 mb-4">
+                            <a href="#" class="btn btn-light">Sign Up !</a>
+                            <a href="#" class="btn bg-warning-subtle">Subscribe</a>
+                        </div>
+                        <div class="d-flex">
+                            <i class="ri-twitter-fill fs-5 me-3 text-warning"></i>
+                            <p class="text-white-50">Pleasures have to repudiated annoyances accepted therefore always
+                                holds chooses
+                                enjoy a pleasure
+                                consequences.</p>
+                        </div>
+                        <div class="d-flex mt-2">
+                            <i class="ri-twitter-fill fs-5 me-3 text-warning"></i>
+                            <p class="text-white-50">Greater pleasures el esndures pains avoid welcomed avoided pariatu.
+                            </p>
+                        </div>
+                        <p class="text-white-50">Are you developer ? <a href="#" class="text-light">Learn More !</a></p>
+                    </div>
+                </div>
+                <!-- row end -->
+            </div>
+        </div>
+        <!-- container end  -->
+        <img src="images/footer.png" alt="" class="img-fluid img-top">
+    </footer>
+    <!-- footer-part end -->
+    <!-- copyright footer start  -->
+    <div class="footer-copyright py-3">
+        <div class="copy-info text-center text-white-50">
+            © 2023 DaKraft - <a href="#" class="text-white-50 text-decoration-underline">
+                Themesdesign</a>
+        </div>
+    </div>
+    <!-- copyright footer end  -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
