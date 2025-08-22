@@ -49,12 +49,7 @@
         height: 3.25rem !important;
         border-radius: 50% !important;
     }
-    .nav-item{
-        border-bottom: 1px solid #4a4a4a1b;
-    }
-    .nav-btn{
-        margin-top: 15px !important;
-    }
+    
 }
 
 @media (min-width: 812px) and (orientation: landscape){
@@ -98,4 +93,5 @@
         height: 3.25rem !important;
         border-radius: 50% !important;
     }
+
   }

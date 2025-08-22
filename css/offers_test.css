@@ -1,0 +1,193 @@
+#scene {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 90%;
+    height: 80vh;
+    max-height: 200vh;
+    position: relative;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+#left-zone {
+    background: #eeeeee57;
+    height: 100%;
+    width: 28vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+#right-zone {
+    background: white;
+    height: 100%;
+    flex-grow: 3;
+    overflow: hidden;
+    z-index: 0;
+
+}
+#right-zone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.06;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.item {
+    width: 100%;
+}
+.item input[type="radio"] {
+    display: none;
+}
+
+.item label {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    opacity: 0.5;
+    height: 15vh;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    color: #4a4a4a;
+    border-right-color: #e51b23;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.item label:first-letter {
+    text-transform: uppercase;
+}
+
+.item label:hover {
+    opacity: 0.75;
+}
+
+.item input[type="radio"]:checked ~ label {
+    color: #e51b23;
+    opacity: 1;
+    border-right: solid 4px;
+}
+
+.item input[type="radio"]:checked ~ label .picto img {
+    filter: saturate(1);
+}
+
+/* Styles spécifiques pour chaque fruit */
+
+.content {
+    position: absolute;
+    left: 28vw;
+    top: -62.112vh;
+    padding-top: 7.5vh;
+    width: 50.781vw;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    opacity: 0;
+    overflow-y: scroll;
+    transition: top 0.75s ease-out, opacity 0.75s ease-out;
+    color: #565656;
+}
+
+.picto {
+    height: 90px;
+    width: 90px;
+}
+
+.picto img {
+    filter: saturate(0);
+}
+
+
+.content h1 {
+    text-transform: capitalize;
+}
+
+.content p {
+    max-width: 90%;
+    text-align: justify;
+    color: #565656;
+    font-size: 0.95rem
+}
+
+/* Animation quand un élément est sélectionné */
+.item input[type="radio"]:checked ~ .content {
+    top: 0;
+    opacity: 1;
+}
+
+/* Bordure centrale */
+#middle-border {
+    background-color: #eee;
+    height: 100%;
+    width: 0.5vw;
+    flex-grow: 1;
+}
+
+/* width */
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+.content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+.content::-webkit-scrollbar-thumb {
+    background: #686868;
+}
+  
+  /* Handle on hover */
+.content::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
+}
+.ft1{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1vh;
+    gap: 1vw;
+}
+
+.ft2{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;    
+    margin-top: 1vh;
+    gap: 1vw;
+}
+
+.features li{
+    width: auto;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1vh 1vw;
+    background-color: rgba(168, 168, 168, 0.15);
+    border-radius: 10px;
+    white-space: nowrap;
+}
+.price{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #af171c !important;
+    opacity: 0.75;
+}
+

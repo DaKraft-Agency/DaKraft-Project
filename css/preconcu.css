@@ -1,0 +1,141 @@
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Zone gauche : Liste des items */
+  .cart-items {
+    flex: 1 1 650px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 300px;
+  }
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+  }
+
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+
+  .item-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+
+  .item-details {
+    flex: 1;
+  }
+
+  .item-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .item-variant {
+    width: 40%;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 8px;
+  }
+
+  .item-price {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+  }
+
+  /* Zone droite : Résumé + total */
+  .cart-summary {
+    flex: 0 0 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 250px;
+    height: fit-content;
+    align-self: flex-start;
+  }
+
+  .summary-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  .summary-row:last-child {
+    margin-bottom: 20px;
+  }
+
+  .summary-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .checkout-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background-color: #ff6f00;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+  }
+
+  .checkout-btn:hover {
+    background-color: #ff8f33;
+  }
+
+  .coupon-box {
+    margin-bottom: 20px;
+  }
+
+  .coupon-box input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .money-back-guarantee {
+    font-size: 0.9rem;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .money-back-guarantee p {
+    margin-bottom: 5px;
+  }
+
+  .money-back-guarantee strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
